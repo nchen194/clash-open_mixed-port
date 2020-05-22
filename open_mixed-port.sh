@@ -15,7 +15,7 @@ read -p " 请输入数字 [0-11]:" num
 		echo -e "mixed-port: ${port}" >> /home/clash/.config/clash/config.yaml
 	;;
 	2)
-		echo "${Green_font_prefix}设置验证后安卓部分应用无法使用${Font_color_suffix}"
+		echo -e "${Green_font_prefix}设置验证后安卓部分应用无法使用${Font_color_suffix}"
 		echo "输入需要验证用户名"
 		read user
 		echo "输入需要验证密码"
