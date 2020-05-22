@@ -11,7 +11,7 @@ echo && echo -e "
 read -p " 请输入数字 [0-11]:" num
  case "$num" in
 	1)
-		echo "输入你需要代理的端口号"
+		echo -e "输入你需要代理的端口号"
 		read port
 		sed -i 's/port: 7890/#port: 7890/g' /home/clash/.config/clash/config.yaml
 		sed -i 's/socks-port: 7891/#socks-port: 7891/g' /home/clash/.config/clash/config.yaml
@@ -19,7 +19,7 @@ read -p " 请输入数字 [0-11]:" num
 		echo -e "mixed-port: ${port}" >> /home/clash/.config/clash/config.yaml
 	;;
 	2)
-		echo -e "${Read_font_prefix}设置验证后安卓部分应用无法使用"
+		echo -e "${Red_background_prefix}设置验证后安卓部分应用无法使用${Font_color_suffix}"
 		echo "输入需要验证用户名"
 		read user
 		echo "输入需要验证密码"
@@ -30,4 +30,4 @@ read -p " 请输入数字 [0-11]:" num
 	*)
 	clear
 	echo -e "${Error}:请输入正确数字 [1-2]"
-esac：
+esac
