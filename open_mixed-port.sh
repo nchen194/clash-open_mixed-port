@@ -1,5 +1,6 @@
 #!/bin/sh
-clear
+clearGreen_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[41;37m" && Font_color_suffix="\033[0m"
+Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[41;37m" && Font_color_suffix="\033[0m"
 echo && echo -e "
  ${Green_font_prefix}1.${Font_color_suffix} 开启mixed-port
  ${Green_font_prefix}2.${Font_color_suffix} 设置用户名密码"
@@ -14,6 +15,7 @@ read -p " 请输入数字 [0-11]:" num
 		echo -e "mixed-port: ${port}" >> /home/clash/.config/clash/config.yaml
 	;;
 	2)
+		echo "设置验证后安卓部分应用无法使用"
 		echo "输入需要验证用户名"
 		read user
 		echo "输入需要验证密码"
