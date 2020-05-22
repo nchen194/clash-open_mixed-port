@@ -17,6 +17,7 @@ read -p " 请输入数字 [0-11]:" num
 		sed -i 's/socks-port: 7891//g' /home/clash/.config/clash/config.yaml
 		sed -i 's/mixed-port/#mixed-port/g' /home/clash/.config/clash/config.yaml
 		echo -e "mixed-port: ${port}" >> /home/clash/.config/clash/config.yaml
+		cd ~
 	;;
 	2)
 		echo -e "${Red_background_prefix}设置验证后安卓部分应用无法使用${Font_color_suffix}"
@@ -26,6 +27,7 @@ read -p " 请输入数字 [0-11]:" num
 		read password
 		echo -e "authentication:\n  - ${user}:${password}" >> /home/clash/.config/clash/config.yaml
 		systemctl restart clash@clash.service
+		cd ~
 	;;
 	*)
 	clear
