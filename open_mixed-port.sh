@@ -20,7 +20,7 @@ read -p " 请输入数字 [0-11]:" num
 		cd ~
 	;;
 	2)
-		echo -e "${Red_background_prefix}设置验证后安卓部分应用无法使用${Font_color_suffix}"
+		echo -e "${Red_background_prefix}设置验证后安卓手机设置apn http代理部分应用无法正常使用${Font_color_suffix}"
 		echo "输入需要验证用户名"
 		read user
 		echo "输入需要验证密码"
