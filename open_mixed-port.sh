@@ -15,7 +15,7 @@ read -p " 请输入数字 [0-11]:" num
 		read port
 		sed -i 's/port: 7890/#port: 7890/g' /home/clash/.config/clash/config.yaml
 		sed -i 's/socks-port: 7891//g' /home/clash/.config/clash/config.yaml
-		sed -i 's/mixed-port/#mixed-port/g' /home/clash/.config/clash/config.yaml
+		sed -i 's/mixed-port//g' /home/clash/.config/clash/config.yaml
 		echo -e "mixed-port: ${port}" >> /home/clash/.config/clash/config.yaml
 		cd ~
 	;;
